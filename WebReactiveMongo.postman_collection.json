@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "5d00db46-e78c-47f6-a2aa-a08b8d7c80f1",
+		"name": "WebReactiveMongo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13385328"
+	},
+	"item": [
+		{
+			"name": "All Cars",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base-url}}/cars?brand=honda",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"cars"
+					],
+					"query": [
+						{
+							"key": "brand",
+							"value": "honda"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Car By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base-url}}/cars/:id",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"cars",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "6596ac79b0b45270d1dd012b"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Car By Model",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base-url}}/cars?brand=honda",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"cars"
+					],
+					"query": [
+						{
+							"key": "brand",
+							"value": "honda"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"brand\": \"Honda\",\n    \"model\": \"City\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base-url}}/cars",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"cars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Car by Id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"brand\": \"Honda\",\n    \"model\": \"Civic\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base-url}}/cars/:id",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"cars",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "653b50f810597d26ada6624f"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete By Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base-url}}/cars/:id",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"cars",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "653b6739c05d36108e550f6f"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

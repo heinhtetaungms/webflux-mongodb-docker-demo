@@ -1,0 +1,17 @@
+server:
+  port: 8081
+
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27777
+      database: ${MONGO_INITDB_ROOT_PASSWORD:my-db}
+      username: ${MONGO_INITDB_ROOT_USERNAME}
+      password: ${MONGO_INITDB_ROOT_PASSWORD}
+      authentication-database: admin
+
+  docker:
+    compose:
+      file: ./docker/compose.dev.yml
+      enabled: true

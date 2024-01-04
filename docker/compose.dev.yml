@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: webflux-mongodb
+    restart: unless-stopped
+    environment:
+      - "MONGO_INITDB_DATABASE=my-db"
+      - "MONGO_INITDB_ROOT_USERNAME=admin"
+      - "MONGO_INITDB_ROOT_PASSWORD=my-password"
+    ports:
+      - "27777:27017"
+    volumes:
+      - mongodb:/data/db
+
+volumes:
+  mongodb:
+    driver: local
